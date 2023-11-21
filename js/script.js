@@ -108,3 +108,22 @@ $("#5pm").children(".btn").on("click", function (e) {
 })
 var todo9 = localStorage.getItem('5pm')
 $("#5pm").children('.description').val(todo9)
+
+// timeblock colours
+// Function to update time block colors
+function updateTimeBlockColors() {
+    var currentHour = today.hour();
+
+    $(".time-block").each(function () {
+        var blockHour = parseInt($(this).attr("id"));
+        var timeBlock = $(this).children(".description");
+
+        if (blockHour < currentHour) {
+            timeBlock.addClass("past");
+        } else if (blockHour === currentHour) {
+            timeBlock.addClass("present");
+        } else {
+            timeBlock.addClass("future");
+        }
+    });
+}
