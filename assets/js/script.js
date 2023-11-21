@@ -7,14 +7,6 @@ $("#9am").children(".btn").on("click", function (e) {
     var todo = $(this).siblings('.description').val();
     var hour = "9am";
     localStorage.setItem(hour, todo)
-})
-
-// 9am todo1
-$("#9am").children(".btn").on("click", function (e) {
-    e.preventDefault();
-    var todo = $(this).siblings('.description').val();
-    var hour = "9am";
-    localStorage.setItem(hour, todo)
 
 })
 var todo1 = localStorage.getItem('9am')
@@ -54,60 +46,59 @@ var todo4 = localStorage.getItem('12pm')
 $("#12pm").children('.description').val(todo4)
 
 // 1pm todo5
-$("#1pm").children(".btn").on("click", function (e) {
+$("#13pm").children(".btn").on("click", function (e) {
     e.preventDefault();
     var todo = $(this).siblings('.description').val();
-    var hour = "1pm";
+    var hour = "13pm";
     localStorage.setItem(hour, todo)
 
 })
-
-var todo5 = localStorage.getItem('1pm')
-$("#1pm").children('.description').val(todo5)
+var todo5 = localStorage.getItem('13pm')
+$("#13pm").children('.description').val(todo5)
 
 // 2pm todo6
-$("#2pm").children(".btn").on("click", function (e) {
+$("#14pm").children(".btn").on("click", function (e) {
     e.preventDefault();
     var todo = $(this).siblings('.description').val();
-    var hour = "2pm";
+    var hour = "14pm";
     localStorage.setItem(hour, todo)
 
 })
-var todo6 = localStorage.getItem('2pm')
-$("#2pm").children('.description').val(todo6)
+var todo6 = localStorage.getItem('14pm')
+$("#14pm").children('.description').val(todo6)
 
 // 3pm todo7
-$("#3pm").children(".btn").on("click", function (e) {
+$("#15pm").children(".btn").on("click", function (e) {
     e.preventDefault();
     var todo = $(this).siblings('.description').val();
-    var hour = "3pm";
+    var hour = "15pm";
     localStorage.setItem(hour, todo)
 
 })
-var todo7 = localStorage.getItem('3pm')
-$("#3pm").children('.description').val(todo7)
+var todo7 = localStorage.getItem('15pm')
+$("#15pm").children('.description').val(todo7)
 
 // 4pm todo8
-$("#4pm").children(".btn").on("click", function (e) {
+$("#16pm").children(".btn").on("click", function (e) {
     e.preventDefault();
     var todo = $(this).siblings('.description').val();
-    var hour = "4pm";
+    var hour = "16pm";
     localStorage.setItem(hour, todo)
 
 })
-var todo8 = localStorage.getItem('4pm')
-$("#4pm").children('.description').val(todo8)
+var todo8 = localStorage.getItem('16pm')
+$("#16pm").children('.description').val(todo8)
 
 // 5pm todo9
-$("#5pm").children(".btn").on("click", function (e) {
+$("#17pm").children(".btn").on("click", function (e) {
     e.preventDefault();
     var todo = $(this).siblings('.description').val();
-    var hour = "5pm";
+    var hour = "17pm";
     localStorage.setItem(hour, todo)
 
 })
-var todo9 = localStorage.getItem('5pm')
-$("#5pm").children('.description').val(todo9)
+var todo9 = localStorage.getItem('17pm')
+$("#17pm").children('.description').val(todo9)
 
 // timeblock colours
 // Function to update time block colors
@@ -120,10 +111,16 @@ function updateTimeBlockColors() {
 
         if (blockHour < currentHour) {
             timeBlock.addClass("past");
+            timeBlock.removeClass("present");
+            timeBlock.removeClass("future");
         } else if (blockHour === currentHour) {
             timeBlock.addClass("present");
+            timeBlock.removeClass("past");
+            timeBlock.removeClass("fututre");
         } else {
             timeBlock.addClass("future");
+            timeBlock.removeClass("present");
+            timeBlock.removeClass("past");
         }
     });
 }
