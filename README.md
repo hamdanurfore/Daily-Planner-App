@@ -1,5 +1,5 @@
 # Daily-Planner-App
-This application showcases my skills utilising JavaScript in order to provide a Daily Planner App to highlight my knowledge on working with Local Storage. You can access the live website [here.](https://hamdanurfore.github.io/MDaily-Planner-App/)
+This application showcases my skills utilising JavaScript in order to provide a Daily Planner App to highlight my knowledge on working with Local Storage. You can access the live website [here.](https://hamdanurfore.github.io/Daily-Planner-App/)
 
 
 # Table of Contents
