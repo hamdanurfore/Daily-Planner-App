@@ -127,3 +127,9 @@ function updateTimeBlockColors() {
         }
     });
 }
+
+// Call the function to update colors initially
+updateTimeBlockColors();
+
+// Update colors every minute (optional)
+setInterval(updateTimeBlockColors, 60000);
